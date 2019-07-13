@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#569e75"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="57dp"
+        android:text="Weight(kg)"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weight"
+        android:layout_alignStart="@+id/weight"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="26dp"
+        android:text="Hight(ft' in&quot;)"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/weight"
+        android:layout_marginLeft="33dp"
+        android:layout_toRightOf="@+id/weight"
+        android:hint="KG"
+        android:textColor="#000"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/ft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Feet"
+        android:textColor="#000"
+        android:layout_alignBaseline="@id/hight"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/hight"
+        android:ems="5"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Inch"
+        android:textColor="#000"
+        android:layout_alignBaseline="@id/ft"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ft"
+        android:ems="5"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hight"
+        android:layout_alignStart="@+id/weight"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="26dp"
+        android:text="Name"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/egjoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ft"
+        android:layout_alignBaseline="@id/name"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/name"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="e.g. Joy"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/egjoy"
+
+        android:layout_alignStart="@+id/egjoy"
+        android:layout_marginTop="14dp"
+        android:text="Result"
+        android:background="#085115"
+        android:textColor="#000"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/egjoy"
+        android:layout_alignBaseline="@id/result"
+
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/result"
+        android:background="#ca0b0b"
+        android:text="Records"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radiobuttongroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/kg"
+
+        android:layout_marginLeft="48dp"
+        android:layout_toRightOf="@id/kg">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Male"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:text="Female"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/resetfirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/result"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_toRightOf="@id/records"
+        android:text="Note: Please Reset First For Use Most Easily***"
+        android:textColor="#16530d"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/about"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/records"
+        android:layout_alignBottom="@+id/radiobuttongroup"
+        android:layout_marginEnd="-178dp"
+        android:layout_marginBottom="-79dp"
+        android:text="About"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/result"
+        android:layout_alignEnd="@+id/hight"
+        android:layout_marginEnd="-4dp"
+        android:background="#ff0000"
+        android:text="Reset"
+        android:textAllCaps="false" />
+
+
+
+
+</RelativeLayout>
